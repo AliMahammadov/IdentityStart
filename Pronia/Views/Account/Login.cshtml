@@ -1,0 +1,47 @@
+﻿@using Pronia.ViewModels.User;
+
+@{
+    ViewData["Title"] = "Login";
+}
+@model UserLoginVM
+<div class="login-register-area section-space-y-axis-100">
+    <div class="container-lg">
+        <h2 class="text-center">Login</h2><br />
+        <div class="row">
+            <div class="col-lg-12 pt-5 pt-lg-0">
+                <form method="post">
+                    <div class="login-form">
+                        <h4 class="login-title">Register</h4>
+                        <div class="row">
+                            <div class="col-md-6 col-12">
+                                <label asp-for="UsernameOrEmail"></label>
+                                <input asp-for="UsernameOrEmail" placeholder="Username Or Email" autocomplete="of" />
+                                <span asp-validation-for="UsernameOrEmail" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6 col-12">
+                                <label asp-for="Password"></label>
+                                <input asp-for="Password" placeholder="Password" autocomplete="of" />
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6 col-12">
+                                <label asp-for="IsParsistance">Remember</label>
+                                <input asp-for="IsParsistance" autocomplete="of" />
+                                <span asp-validation-for="IsParsistance" class="text-danger"></span>
+                            </div>
+                            <div class="text-center text-danger" asp-validation-summary="ModelOnly"></div>
+                            <div class="col-12">
+                                <button asp-controller="Account" asp-action="Register" class="btn btn-custom-size lg-size btn-pronia-primary">
+                                    Go to register
+                                </button>
+                                <button class="btn btn-custom-size lg-size btn-pronia-primary">
+                                    Login
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

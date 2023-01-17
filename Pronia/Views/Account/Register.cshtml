@@ -1,0 +1,63 @@
+﻿@using Pronia.ViewModels.User;
+
+@{
+    ViewData["Title"] = "Register";
+}
+@model UserRegisterVM
+
+<div class="login-register-area section-space-y-axis-100">
+    <div class="container-lg">
+        <h2 class="text-center">Register</h2><br />
+        <div class="row">
+            <div class="col-lg-12 pt-5 pt-lg-0">
+                <form method="post">
+                    <div class="login-form">
+                        <h4 class="login-title">Register</h4>
+                        <div class="row">
+                            <div class="col-md-6 col-12">
+                                <label asp-for="FirstName"></label>
+                                <input asp-for="FirstName" placeholder="First Name" autocomplete="of" />
+                                <span asp-validation-for="FirstName" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6 col-12">
+                                <label asp-for="LastName"></label>
+                                <input asp-for="LastName" placeholder="Last Name" autocomplete="of" />
+                                <span asp-validation-for="LastName" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-12">
+                                <label asp-for="Username"></label>
+                                <input asp-for="Username" placeholder="Username" autocomplete="of" />
+                                <span asp-validation-for="Username" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-12">
+                                <label asp-for="email"></label>
+                                <input asp-for="email" placeholder="Email Address" autocomplete="of" />
+                                <span asp-validation-for="email" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="Password"></label>
+                                <input asp-for="Password" placeholder="Password" autocomplete="of" />
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="ConfirmPassword"></label>
+                                <input asp-for="ConfirmPassword" placeholder="Confirm Password" autocomplete="of" />
+                                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                            </div>
+                            <div class="text-center text-danger" asp-validation-summary="ModelOnly"></div>
+                            <div class="col-12">
+                                <button asp-controller="Account" asp-action="Login" class="btn btn-custom-size lg-size btn-pronia-primary">
+                                    Back to login
+                                </button>
+                                <button class="btn btn-custom-size lg-size btn-pronia-primary">
+                                    Register
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
